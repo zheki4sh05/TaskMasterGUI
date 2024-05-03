@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RootStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="1024.0" style="-fx-background-color: rgb(240, 248, 255);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="6.0" prefHeight="634.0" prefWidth="202.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <BorderPane layoutY="-2.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: rgb(82, 95, 110);" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <Pane prefHeight="227.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane layoutY="74.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <MFXButton fx:id="overviewBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showOverviewCalendarPage" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-color: rgb(82, 95, 110);" styleClass="menu_btn" text="Обзор" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/overview_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="114.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <MFXButton fx:id="CalendarActivityBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showCalendarPage" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-color: rgb(82, 95, 110);" text="Календарь" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/icons8-отрывной-календарь-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="154.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <MFXButton fx:id="kanbanBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showKanbanPage" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-width: 0 0 0 5;" text="Канбан" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/icons8-канбан-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="194.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <MFXButton fx:id="createPlanBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showPlanMakerPopup" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-width: 0 0 0 5;" text="Создать проект" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/icons8-добавить-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="34.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <MFXButton fx:id="mainPageBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showMainPage" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-color: rgb(82, 95, 110);" styleClass="menu_btn" text="Главная" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/icons8-главная-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </center>
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="80.0" prefWidth="202.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="22.0" text="Планировщик" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <Label layoutX="122.0" layoutY="51.0" text="задач" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ComboBox fx:id="projectsDropDownList" layoutX="12.0" layoutY="144.0" prefHeight="39.0" prefWidth="171.0" promptText="Выбрать проект..." style="-fx-background-color: rgb(240, 248, 255);">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label layoutX="13.0" layoutY="121.0" text="Текущий проект:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <bottom>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane layoutX="7.0" layoutY="77.0" prefHeight="54.0" prefWidth="186.0">
+                           <children>
+                              <MFXButton layoutX="6.0" layoutY="-1.0" onMouseClicked="#showInfo" prefHeight="54.0" prefWidth="54.0" style="-fx-background-radius: 100; -fx-background-color: rgb(220, 220, 220);" text="Инфо">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></MFXButton>
+                              <Label fx:id="userLoginLbl" layoutX="70.0" layoutY="17.0" prefHeight="17.0" prefWidth="102.0" text="Evgeniy05" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="146.0" prefHeight="40.0" prefWidth="199.0">
+                           <children>
+                              <MFXButton fx:id="settingsPageBtn" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="3.0" onMouseClicked="#showSettingsPage" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: rgb(82, 95, 110); -fx-border-width: 0 0 0 5;" text="Настройки" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/icons8-настройки-50.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </bottom>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" prefHeight="80.0" prefWidth="824.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane fx:id="createTaskBox" layoutX="20.0" layoutY="16.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <MFXButton fx:id="createTaskBtn" alignment="BASELINE_LEFT" buttonType="RAISED" depthLevel="LEVEL1" layoutX="1.0" layoutY="3.0" onMouseClicked="#createTask" prefHeight="35.0" prefWidth="199.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Создать задачу" textFill="#525f6e">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-плюс-2-30.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutY="48.0" prefHeight="574.0" prefWidth="798.0" style="-fx-background-color: #f2fafc;" />
+               </children>
+            </Pane>
+            <Pane layoutX="542.0" layoutY="15.0" prefHeight="50.0" prefWidth="304.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <TextField fx:id="searchInput" layoutX="6.0" layoutY="5.0" prefHeight="40.0" prefWidth="211.0" promptText="Заголовок, дата, описание....">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <MFXButton fx:id="searchBtn" layoutX="232.0" layoutY="10.0" onMouseClicked="#callSearchHandler" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: rgb(82, 95, 110);" text="Поиск" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="greetMsgBox" layoutX="16.0" layoutY="14.0" prefHeight="46.0" prefWidth="556.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="294.0" text="Добро пожаловать,">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userNameLbl" layoutX="300.0" prefHeight="46.0" prefWidth="240.0" text="UserName">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ContentArea" layoutX="207.0" layoutY="82.0" prefHeight="566.0" prefWidth="823.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="82.0" />
+   </children>
+</AnchorPane>

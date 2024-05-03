@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="106.0" prefWidth="885.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <DropShadow height="16.32" radius="5.92" width="9.36">
+         <color>
+            <Color red="0.8736842274665833" green="0.8736842274665833" blue="0.8736842274665833" />
+         </color>
+      </DropShadow>
+   </effect>
+   <children>
+      <Label fx:id="projectNameLbl" layoutX="20.0" layoutY="14.0" prefHeight="27.0" prefWidth="208.0" text="Название проекта" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="47.0" prefHeight="27.0" prefWidth="208.0" text="Прогресс выполнения" />
+      <Label fx:id="doneCountLbl" layoutX="306.0" layoutY="47.0" prefHeight="27.0" prefWidth="20.0" text="0" />
+      <VBox layoutX="705.0" layoutY="25.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Pane>
+               <children>
+                  <MFXButton fx:id="editProject" alignment="BASELINE_LEFT" buttonType="RAISED" depthLevel="LEVEL1" layoutY="-9.0" prefHeight="27.0" prefWidth="142.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white;" styleClass="menu_btn" text="Редактировать" textFill="#525f6e">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="4.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-редактировать-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane VBox.vgrow="ALWAYS">
+               <children>
+                  <MFXButton fx:id="delProjectBtn" alignment="BASELINE_LEFT" buttonType="RAISED" depthLevel="LEVEL1" layoutX="2.0" layoutY="1.0" prefHeight="27.0" prefWidth="99.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white;" styleClass="menu_btn" text="Удалить" textFill="#f31919">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-мусор-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label layoutX="374.0" layoutY="5.0" text="Канбан:" />
+      <MFXListView fx:id="projectStatusList" layoutX="371.0" layoutY="25.0" prefHeight="74.0" prefWidth="155.0" style="-fx-background-radius: 3; -fx-border-radius: 3;">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets left="5.0" />
+         </opaqueInsets></MFXListView>
+      <Label fx:id="todoCountLbl" layoutX="275.0" layoutY="47.0" prefHeight="27.0" prefWidth="20.0" text="0" />
+      <Label fx:id="resultLbl11" layoutX="291.0" layoutY="47.0" prefHeight="27.0" prefWidth="6.0" text="/" />
+      <ProgressBar fx:id="projectProgressBar" layoutX="19.0" layoutY="78.0" prefHeight="18.0" prefWidth="306.0" progress="0.0" />
+   </children>
+</AnchorPane>

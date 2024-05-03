@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="895.0" style="-fx-background-color: #f2fafc;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="310.0" layoutY="14.0" prefHeight="115.0" prefWidth="640.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: rgb(82,95,110);" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <effect>
+            <DropShadow height="16.32" radius="5.92" width="9.36">
+               <color>
+                  <Color red="0.8736842274665833" green="0.8736842274665833" blue="0.8736842274665833" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane layoutX="223.0" layoutY="9.0" prefHeight="106.0" prefWidth="644.0" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="9.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="134.0" layoutX="416.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/business-planning-destination-business-work-flow-time-management-planning-task-app-teamwork-meeting_566886-10077.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="5.0" text="На сегодня у Вас">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="todayTasksCountLbl" layoutX="161.0" layoutY="3.0" prefHeight="30.0" prefWidth="32.0" text="0" textFill="#525f6e">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="179.0" layoutY="5.0" text="запланированных задач!">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <MFXButton fx:id="showCalendarPageBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL1" layoutX="89.0" layoutY="53.0" onMouseClicked="#openCalendarPage" prefHeight="38.0" prefWidth="208.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(82, 95, 110);" styleClass="menu_btn" text="Просмотреть" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="17.0" layoutY="15.0" prefHeight="90.0" prefWidth="208.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Label fx:id="weekDayNameLbl" prefHeight="45.0" prefWidth="208.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fullDateLbl" layoutY="46.0" prefHeight="35.0" prefWidth="235.0" text="8 Ноября 2023">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="14.0" layoutY="137.0">
+         <children>
+            <Label layoutY="4.0" prefHeight="18.0" prefWidth="142.0" text="Всего проектов">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="projectsCountLbl" layoutX="142.0" prefHeight="30.0" prefWidth="32.0" text="0" textFill="#525f6e">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="183.0">
+         <children>
+            <MFXScrollPane layoutX="333.0" layoutY="113.0" style="-fx-background-color: #f2fafc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox fx:id="projectsContainer" spacing="10.0" />
+               </content>
+            </MFXScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

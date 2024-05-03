@@ -1,0 +1,26 @@
+:root {
+    --border-rad-big: 30px;
+  }
+  @font-face {
+    font-family: 'ofont.ru_Hero';
+    src: url('ofont.ru_Hero.ttf') format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+.middle_border-rad{
+    -fx-background-radius:25px;
+}
+.logo{
+  -fx-font-size: 15px;
+  -fx-font-family:"ofont.ru_Hero";
+  -fx-text-fill:"white";
+}
+.remove_btn-image{
+  -fx-background-image:url("file:/src/main/resources/images/icons8-поиск-50.png");
+  -fx-background-repeat: no-repeat; 
+-fx-background-size: 100 100; 
+-fx-background-position: center center;
+}
+.menu_btn:hover{
+  -fx-background-color:  rgb(240, 248, 255);
+}

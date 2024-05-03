@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane>
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" text="Общие" textFill="#525f6e">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="57.0">
+               <children>
+                  <TextField fx:id="nameTextFiled" layoutX="261.0" prefHeight="26.0" prefWidth="208.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <ListView fx:id="kanbanList" layoutY="0.40000152587890625" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="132.0" prefWidth="246.0" />
+                  <Button fx:id="addNamebtn" layoutX="261.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#addNameHandler" text="Добавить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="deleteNamebtn" layoutX="343.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#deleteNameHandler" prefHeight="25.0" prefWidth="69.0" text="Удалить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <CheckBox fx:id="autoGeneration" layoutX="268.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#autoGenerationSelection" prefHeight="38.0" prefWidth="148.0" text="Автогенерация">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="34.0" text="Колонки Канбан" />
+            <Button fx:id="saveSettingsBtn" layoutX="496.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#saveSettingsHandler" prefHeight="25.0" prefWidth="82.0" text="Сохранить">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="195.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="13.0" layoutY="49.0">
+               <children>
+                  <MFXButton fx:id="logoutBtn" alignment="BASELINE_LEFT" depthLevel="LEVEL1" onMouseClicked="#logoutHandler" prefHeight="27.0" prefWidth="99.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white;" text="Выйти" textFill="#f31919">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Выйти из аккаунта на страницу авторизации" />
+                     </tooltip>
+                  </MFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-выход-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="21.0" prefHeight="20.0" prefWidth="124.0" text="Учетная запись" textFill="#525f6e">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="13.0" layoutY="91.0" prefHeight="69.0" prefWidth="564.0">
+               <children>
+                  <TextField fx:id="changeLoginTield" layoutY="33.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutY="8.0" prefHeight="17.0" prefWidth="43.0" text="Логин" />
+                  <Button fx:id="saveLoginBtn" layoutX="168.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#onSaveLoginHandler" prefHeight="25.0" prefWidth="82.0" text="Сохранить">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="authResult" layoutX="168.0" layoutY="7.0" prefHeight="20.0" prefWidth="338.0" textFill="RED" />
+                  <Button fx:id="resetLoginBtn" layoutX="260.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#onResetLoginHandler" prefHeight="25.0" prefWidth="82.0" text="Отмена">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <CheckBox fx:id="saveMeCheckBox" layoutX="13.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#changeSelection" text="Запомнить меня">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Pane>
+      <Pane prefHeight="70.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="124.0" text="Приложение" textFill="#525f6e">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="32.0">
+               <children>
+                  <MFXButton fx:id="closeAppBtn" alignment="BASELINE_LEFT" depthLevel="LEVEL1" onMouseClicked="#closeHandler" prefHeight="27.0" prefWidth="99.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white;" text="Закрыть" textFill="#f31919">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Закрыть приложение" />
+                     </tooltip>
+                  </MFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-выход-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

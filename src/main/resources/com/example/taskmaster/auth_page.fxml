@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="563.0" style="-fx-background-color: rgb(82, 95, 110);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="190.0" layoutY="29.0" text="Планировщик" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="303.0" layoutY="58.0" text="задач" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <TabPane fx:id="regTabPane" layoutX="105.0" layoutY="108.0" prefHeight="302.0" prefWidth="353.0" style="-fx-background-color: rgb(240, 248, 255); -fx-background-radius: 10; -fx-border-radius: 10;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="loginTab" text="Вход">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(240, 248, 255); -fx-background-radius: 10;">
+                     <children>
+                        <TextField fx:id="loginAuth" prefHeight="40.0" prefWidth="334.0" promptText="Логин">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <PasswordField fx:id="passAuth" prefHeight="40.0" prefWidth="334.0" promptText="Пароль">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Label fx:id="authResult" prefHeight="32.0" prefWidth="338.0" textFill="RED">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <MFXButton fx:id="loginActionBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" onMouseClicked="#startAuthAction" prefHeight="38.0" prefWidth="359.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Войти" textFill="#525f6e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="20.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab fx:id="regTeb" text="Регистрация">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="loginReg" prefHeight="40.0" prefWidth="334.0" promptText="Логин">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField fx:id="passReg1" prefHeight="35.0" prefWidth="334.0" promptText="Пароль">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <PasswordField fx:id="passReg2" layoutX="20.0" layoutY="80.0" prefHeight="35.0" prefWidth="334.0" promptText="Повторите пароль">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Label fx:id="regResult" prefHeight="23.0" prefWidth="330.0" textFill="RED">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <MFXButton fx:id="regActionBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" onMouseClicked="#onRegAction" prefHeight="38.0" prefWidth="359.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Зарегистрироваться" textFill="#525f6e">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="5.0" />
+                           </VBox.margin>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

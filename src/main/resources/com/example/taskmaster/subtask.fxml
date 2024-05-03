@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" style="-fx-border-color: rgb(82, 95, 110); -fx-border-width: 0 0 2 0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox fx:id="subTaskControl" layoutX="4.0" layoutY="5.0" mnemonicParsing="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <TextField fx:id="subTaskName" editable="false" layoutX="28.0" layoutY="1.0" prefHeight="26.0" prefWidth="133.0">
+         <tooltip>
+            <Tooltip text="Двойной клик для редактирования" />
+         </tooltip>
+      </TextField>
+   </children>
+   <padding>
+      <Insets top="3.0" />
+   </padding>
+</Pane>

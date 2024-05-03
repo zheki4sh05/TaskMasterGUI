@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minWidth="1000.0" prefHeight="586.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="calendarPickerContainer" layoutX="2.0" layoutY="2.0" prefHeight="586.0" prefWidth="353.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="645.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <AnchorPane layoutX="-2.0" layoutY="54.0" prefHeight="399.0" prefWidth="324.0">
+                <FlowPane fx:id="CalendarActivity" hgap="5.0" layoutX="7.0" layoutY="68.0" prefHeight="280.0" prefWidth="310.0" vgap="5.0" />
+                <HBox alignment="CENTER" layoutX="7.0" layoutY="29.0" prefHeight="44.0" prefWidth="310.0" spacing="30.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Вс" textAlignment="CENTER" />
+                        <Text layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пн" textAlignment="CENTER" />
+                        <Text layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вт" textAlignment="CENTER" />
+                        <Text layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ср" textAlignment="CENTER" />
+                        <Text layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Чт" textAlignment="CENTER" />
+                        <Text layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пт" textAlignment="CENTER" />
+                        <Text layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cб" textAlignment="CENTER" />
+                    </children>
+                    <padding>
+                        <Insets right="9.0" />
+                    </padding>
+                </HBox>
+               <HBox alignment="CENTER" layoutY="-1.0" prefHeight="30.0" prefWidth="324.0" spacing="20.0">
+                  <children>
+                        <Text fx:id="year" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="month" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Text>
+                  </children>
+               </HBox>
+            
+                                          </AnchorPane>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="6.0" layoutY="3.0">
+         <children>
+            <Pane layoutX="11.0" layoutY="8.0" prefHeight="36.0" prefWidth="378.0">
+               <children>
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL1" onAction="#backOneMonth" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-color: rgb(220, 220, 220); -fx-border-radius: 5; -fx-background-color: white;" text="Назад" textFill="#525f6e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="114.0" onAction="#forwardOneMonth" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-color: rgb(220, 220, 220); -fx-border-radius: 5; -fx-background-color: white;" text="Дальше" textFill="#525f6e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="229.0" layoutY="2.0" onAction="#backToday" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-color: rgb(220, 220, 220); -fx-border-radius: 5; -fx-background-color: white;" text="Сегодня" textFill="#525f6e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="363.0" layoutY="19.0" prefHeight="548.0" prefWidth="632.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="10.0">
+         <content>
+            <Pane prefHeight="546.0" prefWidth="808.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox fx:id="tasksContainer" minWidth="420.0" prefHeight="546.0" prefWidth="552.0" spacing="15.0" style="-fx-background-color: white;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="taskControlBar" layoutX="572.0" layoutY="18.0" prefHeight="306.0" prefWidth="188.0" style="-fx-border-color: rgb(82, 95, 110); -fx-border-radius: 10;">
+                     <children>
+                        <Label fx:id="taskNameLbl" prefHeight="29.0" prefWidth="174.0" />
+                        <HBox prefHeight="26.0" prefWidth="178.0">
+                           <children>
+                              <TextField fx:id="subTaskNameField" prefHeight="26.0" prefWidth="140.0" promptText="Создать подзадачу">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <MFXButton fx:id="addSubtaskBtn" prefHeight="12.0" prefWidth="35.0" style="-fx-background-color: rgb(82, 95, 110);" text="+" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="7.0" />
+                                 </HBox.margin>
+                              </MFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <ScrollPane fx:id="subtasksPaneContainer" prefHeight="182.0" prefWidth="163.0">
+                           <content>
+                              <VBox fx:id="subTasksContainer" prefHeight="0.0" prefWidth="171.0" />
+                           </content>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ScrollPane>
+                        <BorderPane prefHeight="38.0" prefWidth="175.0">
+                           <center>
+                              <Pane BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane layoutX="38.0" layoutY="5.0" prefHeight="29.0" prefWidth="100.0">
+                                       <children>
+                                          <MFXButton fx:id="delTaskBtn" alignment="BASELINE_LEFT" depthLevel="LEVEL1" layoutX="2.0" layoutY="3.0" prefHeight="27.0" prefWidth="99.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white;" styleClass="menu_btn" text="Удалить" textFill="#f31919">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <tooltip>
+                                                <Tooltip text="Удалить задачу" />
+                                             </tooltip>
+                                          </MFXButton>
+                                          <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/icons8-мусор-24.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

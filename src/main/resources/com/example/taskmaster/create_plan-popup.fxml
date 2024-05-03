@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450.0" prefWidth="380.0" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: white; -fx-border-color: rgb(82, 95, 110);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="58.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" text="Добавление плана">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="371.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="20.0" prefWidth="144.0" text="Введите название">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="20.0" layoutY="36.0" prefHeight="32.0" prefWidth="276.0" />
+            <Label layoutX="20.0" layoutY="84.0" prefHeight="20.0" prefWidth="144.0" text="Выберите цвет">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ColorPicker layoutX="20.0" layoutY="107.0" />
+            <Label layoutX="21.0" layoutY="153.0" prefHeight="20.0" prefWidth="122.0" text="Введите дедлайн">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="186.0" prefHeight="20.0" prefWidth="60.0" text="С">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker layoutX="57.0" layoutY="184.0" />
+            <Label layoutX="32.0" layoutY="229.0" prefHeight="20.0" prefWidth="60.0" text="По">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker layoutX="57.0" layoutY="227.0" />
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="65.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXButton fx:id="createBtn" layoutX="280.0" layoutY="15.0" onMouseClicked="#handleCloseCreateBtn" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: rgb(82, 95, 110); -fx-background-radius: 10; -fx-border-radius: 10;" text="Создать" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXButton>
+            <MFXButton fx:id="canselBtn" layoutX="188.0" layoutY="15.0" onMouseClicked="#handleCloseCanselBtn" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: rgb(240, 248, 255); -fx-border-color: rgb(82, 95, 110); -fx-background-radius: 10; -fx-border-radius: 10;" text="Отмена">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXButton>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

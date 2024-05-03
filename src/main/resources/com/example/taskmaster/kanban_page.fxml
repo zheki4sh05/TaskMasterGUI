@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="kanbanBoardWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutY="48.0" style="-fx-background-color: rgb(240, 248, 255);" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="48.0">
+         <content>
+            <HBox fx:id="columnsContainer" spacing="20.0" style="-fx-background-color: rgb(240, 248, 255);" />
+         </content>
+      </ScrollPane>
+      <Pane layoutX="800.0" layoutY="153.0" prefHeight="112.0" prefWidth="201.0" AnchorPane.bottomAnchor="254.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="153.0">
+         <children>
+            <Pane layoutX="114.0" layoutY="44.0" prefHeight="29.0" prefWidth="86.0">
+               <children>
+                  <MFXButton fx:id="deleteBoardBtn" alignment="BASELINE_LEFT" buttonType="RAISED" depthLevel="LEVEL1" layoutX="8.0" layoutY="3.0" onMouseClicked="#deleteBoardHandler" prefHeight="30.0" prefWidth="76.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Удалить" textFill="#f31919">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets left="26.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Удалить задачу" />
+                     </tooltip>
+                  </MFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/icons8-мусор-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <MFXButton fx:id="overviewBtn111" buttonType="RAISED" depthLevel="LEVEL1" layoutX="36.0" layoutY="2.0" onMouseClicked="#createBoardConfirm" prefHeight="34.0" prefWidth="161.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Создать колонку" textFill="#525f6e">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXButton>
+            <MFXButton fx:id="editBoardBtn" buttonType="RAISED" depthLevel="LEVEL1" layoutX="37.0" layoutY="47.0" onMouseClicked="#editBoardHandler" prefHeight="30.0" prefWidth="76.0" style="-fx-border-color: rgb(82, 95, 110); -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: rgb(240, 248, 255);" styleClass="menu_btn" text="Изменить" textFill="#525f6e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </MFXButton>
+            <ComboBox fx:id="columnsComboBox" layoutX="36.0" layoutY="86.0" prefHeight="25.0" prefWidth="161.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
